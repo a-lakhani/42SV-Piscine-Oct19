@@ -4,3 +4,6 @@
 [submodule "D00"]
 	path = D00
 	url = vogsphere@vgs.42.us.org:intra/2019/activities/piscine_c_day_00/alakhani
+[submodule "D02"]
+	path = D02
+	url = vogsphere@vgs.42.us.org:intra/2019/activities/piscine_c_day_02/alakhani
