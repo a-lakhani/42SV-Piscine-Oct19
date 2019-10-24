@@ -1,3 +1,6 @@
 [submodule "D01"]
 	path = D01
 	url = ./D01
+[submodule "D00"]
+	path = D00
+	url = vogsphere@vgs.42.us.org:intra/2019/activities/piscine_c_day_00/alakhani
