@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alakhani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/26 00:10:30 by alakhani          #+#    #+#             */
-/*   Updated: 2019/10/26 01:15:51 by alakhani         ###   ########.fr       */
+/*   Created: 2019/10/26 01:17:23 by alakhani          #+#    #+#             */
+/*   Updated: 2019/10/26 01:33:33 by alakhani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
+int	ft_recursive_factorial(int nb)
 {
 	int factorial;
 
@@ -25,7 +25,7 @@ int	ft_iterative_factorial(int nb)
 	}
 	while (nb > 1)
 	{
-		factorial = factorial * (nb - 1);
+		factorial = factorial * ft_recursive_factorial(nb - 1);
 		nb--;
 	}
 	return (factorial);
