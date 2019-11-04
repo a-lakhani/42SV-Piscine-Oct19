@@ -6,9 +6,11 @@
 /*   By: alakhani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/03 12:31:29 by alakhani          #+#    #+#             */
-/*   Updated: 2019/11/03 17:12:30 by alakhani         ###   ########.fr       */
+/*   Updated: 2019/11/03 17:46:57 by alakhani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int		ft_strlen(char *str)
 {
@@ -20,33 +22,31 @@ int		ft_strlen(char *str)
 	return (i);
 }
 
-int		*word_lengths(char **s, int len)
+void	*word_lengths(char **s, int *lengths, int len)
 {
 	int		i;
-	int		lengths[len];
 
 	i = 0;
-	lengths = { 0 };
-	while (s[i])
-		lengths[i] = ft_strlen(s[i++]);
-	return (lengths);
+	while (s[i][0])
+	{
+		lengths[i] = ft_strlen(s[i]);
+		i++;
+	}
 }
 
-char	*ft_strncpy(char *s, int len)
+void	*ft_strncpy(char *s, char *q, int len)
 {
-	char	buffer[len];
 	int		i;
 
 	i = 0;
 	while (i < len)
 	{
-		buffer[i] = *(s + i);
+		q[i] = *(s + i);
 		i++;
 	}
-	return (buffer);
 }
 
-char	**ft_split_stars(char *s, int len)
+void	**ft_split_stars(char *s, char **q, int len)
 {
 	char	words[len][len];
 	int		i;
@@ -56,7 +56,7 @@ char	**ft_split_stars(char *s, int len)
 	i = 0;
 	j = 0;
 	k = 0;
-	words[][]={ 0 };
+	words = {0};
 	while (s[i])
 	{
 		if (s[i] == '*' && (i ? s[i - 1] != '*' : 1))
@@ -72,9 +72,29 @@ char	**ft_split_stars(char *s, int len)
 int		match(char *s1, *s2)
 {
 	char	**words;
+	int		*lengths;
 	int		i;
+	
+	words = ft_split_stars(s2, ft_strlen(s2));
+	lengths = word_lengths(s2, ft_strlen(s2));
+	return (0);
+}
 
+int		main(void)
+{
+	char	s;
+	char	**words;
+	int		lengths;
+	int		len;
 
-
-
+	s = "*well*does this:wo**rk*?*";
+	len = ft_strlen(s);
+	words = ft_split_stars(s, len);
+	lengths = word_lengths(s, len);
+	for (i = 0; i < len && words[i++][0];)
+		printf("%s\t", words[i]);
+	printf("\n");
+	for (i = 0; i < len && lengths[i++];)
+		printf("%d\t", lengths[i]);
+	return (0);
 }
