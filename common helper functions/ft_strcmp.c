@@ -1,46 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alakhani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/31 21:22:05 by alakhani          #+#    #+#             */
-/*   Updated: 2019/10/31 23:26:27 by alakhani         ###   ########.fr       */
+/*   Created: 2019/10/30 20:37:11 by alakhani          #+#    #+#             */
+/*   Updated: 2019/10/30 21:50:14 by alakhani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int		ft_strlen(char *str)
+int		ft_strcmp(char *s1, char *s2)
 {
+	char	c1;
+	char	c2;
 	int		i;
 
 	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-char	*ft_strdup(char *src)
-{
-	int		len;
-	char	*copy;
-	int		i;
-
-	i = 0;
-	len = ft_strlen(src);
-	copy = NULL;
-	if (len == 0)
-		return (copy);
-	else
-		copy = malloc(len);
-	while (len)
+	c1 = s1[i];
+	c2 = s2[i];
+	while (c1 == c2)
 	{
-		copy[i] = src[i];
-		if (src[i] == '\0')
-			break ;
 		i++;
+		c1 = s1[i];
+		c2 = s2[i];
 	}
-	return (copy);
+	return (c1 - c2);
 }
