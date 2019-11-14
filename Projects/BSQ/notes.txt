@@ -1,0 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    readme.txt                                         :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: alakhani <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/11/11 17:57:42 by alakhani          #+#    #+#              #
+#    Updated: 2019/11/11 17:59:11 by alakhani         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+FILES TO DELETE FROM REPO BEFORE WEDNESDAY 11:42 PM
+
+srcs/strings/bigdaddystrings.c
+testfile
+readme.txt
+
+
